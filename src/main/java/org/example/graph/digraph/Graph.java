@@ -1,4 +1,4 @@
-package org.example.digraph;
+package org.example.graph.digraph;
 
 import java.util.*;
 
