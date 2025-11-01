@@ -19,7 +19,11 @@ public class Output {
         public final List<String> topoOrder; // condensation topo
         public final DagResult dag; // optional DAG results
         public Result(int graph_id, Map<String,Integer> input_stats, Object scc, List<String> topoOrder, DagResult dag) {
-            this.graph_id = graph_id; this.input_stats = input_stats; this.scc = scc; this.topoOrder = topoOrder; this.dag = dag;
+            this.graph_id = graph_id;
+            this.input_stats = input_stats;
+            this.scc = scc;
+            this.topoOrder = topoOrder;
+            this.dag = dag;
         }
     }
 
