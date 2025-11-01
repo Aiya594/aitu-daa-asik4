@@ -21,7 +21,7 @@ public class tests {
     private static Input input;
     private static final String INPUT_PATH = "data/input.json";
     private static final String OUTPUT_JSON_PATH = "data/output_test.json";
-    private static final String OUTPUT_CSV_PATH = "data/results.csv";
+    private static final String OUTPUT_CSV_PATH = "data/results_test.csv";
 
     private static final List<Output.Result> allResults = new ArrayList<>();
 
