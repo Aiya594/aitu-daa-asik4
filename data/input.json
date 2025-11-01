@@ -1,0 +1,202 @@
+{
+  "graphs": [
+    {
+      "id": 1,
+      "name": "Small Graph 1 – Simple DAG",
+      "nodes": ["A","B","C","D","E","F"],
+      "edges": [
+        {"from": "A", "to": "B", "weight": 3},
+        {"from": "A", "to": "C", "weight": 2},
+        {"from": "B", "to": "D", "weight": 4},
+        {"from": "C", "to": "E", "weight": 1},
+        {"from": "D", "to": "F", "weight": 5},
+        {"from": "E", "to": "F", "weight": 3}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Small Graph 2 – One Cycle",
+      "nodes": ["A","B","C","D","E","F","G"],
+      "edges": [
+        {"from": "A", "to": "B", "weight": 2},
+        {"from": "B", "to": "C", "weight": 4},
+        {"from": "C", "to": "A", "weight": 1},
+        {"from": "C", "to": "D", "weight": 3},
+        {"from": "D", "to": "E", "weight": 2},
+        {"from": "E", "to": "F", "weight": 5},
+        {"from": "F", "to": "G", "weight": 4}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Small Graph 3 – Two Cycles",
+      "nodes": ["A","B","C","D","E","F","G","H"],
+      "edges": [
+        {"from": "A", "to": "B", "weight": 1},
+        {"from": "B", "to": "C", "weight": 2},
+        {"from": "C", "to": "A", "weight": 3},
+        {"from": "C", "to": "D", "weight": 2},
+        {"from": "D", "to": "E", "weight": 5},
+        {"from": "E", "to": "F", "weight": 1},
+        {"from": "F", "to": "E", "weight": 2},
+        {"from": "F", "to": "G", "weight": 4},
+        {"from": "G", "to": "H", "weight": 3}
+      ]
+    },
+
+    {
+      "id": 4,
+      "name": "Medium Graph 1 – Mixed DAG and Cycles",
+      "nodes": ["A","B","C","D","E","F","G","H","I","J","K","L"],
+      "edges": [
+        {"from":"A","to":"B","weight":2},
+        {"from":"B","to":"C","weight":3},
+        {"from":"C","to":"A","weight":1},
+        {"from":"C","to":"D","weight":4},
+        {"from":"D","to":"E","weight":2},
+        {"from":"E","to":"F","weight":3},
+        {"from":"F","to":"G","weight":4},
+        {"from":"G","to":"H","weight":5},
+        {"from":"H","to":"I","weight":1},
+        {"from":"I","to":"J","weight":2},
+        {"from":"J","to":"K","weight":3},
+        {"from":"K","to":"L","weight":1}
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Medium Graph 2 – Several SCCs",
+      "nodes": ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"],
+      "edges": [
+        {"from":"A","to":"B","weight":2},
+        {"from":"B","to":"A","weight":3},
+        {"from":"B","to":"C","weight":1},
+        {"from":"C","to":"D","weight":4},
+        {"from":"D","to":"E","weight":2},
+        {"from":"E","to":"C","weight":2},
+        {"from":"E","to":"F","weight":1},
+        {"from":"F","to":"G","weight":3},
+        {"from":"G","to":"H","weight":4},
+        {"from":"H","to":"I","weight":2},
+        {"from":"I","to":"J","weight":3},
+        {"from":"J","to":"K","weight":1},
+        {"from":"K","to":"L","weight":2},
+        {"from":"L","to":"M","weight":3},
+        {"from":"M","to":"N","weight":2},
+        {"from":"N","to":"O","weight":4}
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Medium Graph 3 – Pure DAG for SP Tests",
+      "nodes": ["A","B","C","D","E","F","G","H","I","J","K","L","M"],
+      "edges": [
+        {"from":"A","to":"B","weight":4},
+        {"from":"A","to":"C","weight":2},
+        {"from":"B","to":"D","weight":3},
+        {"from":"C","to":"D","weight":1},
+        {"from":"C","to":"E","weight":5},
+        {"from":"D","to":"F","weight":2},
+        {"from":"E","to":"G","weight":4},
+        {"from":"F","to":"H","weight":3},
+        {"from":"G","to":"I","weight":2},
+        {"from":"H","to":"J","weight":1},
+        {"from":"I","to":"K","weight":2},
+        {"from":"J","to":"L","weight":3},
+        {"from":"K","to":"M","weight":4}
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Large Graph 1 – Dense Cyclic Structure",
+      "nodes": ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T"],
+      "edges": [
+        {"from":"A","to":"B","weight":1},
+        {"from":"B","to":"C","weight":2},
+        {"from":"C","to":"A","weight":3},
+        {"from":"C","to":"D","weight":2},
+        {"from":"D","to":"E","weight":4},
+        {"from":"E","to":"F","weight":3},
+        {"from":"F","to":"C","weight":2},
+        {"from":"F","to":"G","weight":1},
+        {"from":"G","to":"H","weight":3},
+        {"from":"H","to":"I","weight":2},
+        {"from":"I","to":"J","weight":4},
+        {"from":"J","to":"K","weight":2},
+        {"from":"K","to":"L","weight":3},
+        {"from":"L","to":"M","weight":1},
+        {"from":"M","to":"N","weight":5},
+        {"from":"N","to":"O","weight":3},
+        {"from":"O","to":"P","weight":2},
+        {"from":"P","to":"Q","weight":4},
+        {"from":"Q","to":"R","weight":2},
+        {"from":"R","to":"S","weight":3},
+        {"from":"S","to":"T","weight":1}
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Large Graph 2 – Mixed DAG with SCCs",
+      "nodes": ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X"],
+      "edges": [
+        {"from":"A","to":"B","weight":2},
+        {"from":"B","to":"C","weight":4},
+        {"from":"C","to":"A","weight":1},
+        {"from":"C","to":"D","weight":3},
+        {"from":"D","to":"E","weight":2},
+        {"from":"E","to":"F","weight":1},
+        {"from":"F","to":"G","weight":3},
+        {"from":"G","to":"H","weight":5},
+        {"from":"H","to":"I","weight":2},
+        {"from":"I","to":"J","weight":4},
+        {"from":"J","to":"K","weight":2},
+        {"from":"K","to":"L","weight":3},
+        {"from":"L","to":"M","weight":1},
+        {"from":"M","to":"N","weight":5},
+        {"from":"N","to":"O","weight":3},
+        {"from":"O","to":"P","weight":4},
+        {"from":"P","to":"Q","weight":2},
+        {"from":"Q","to":"R","weight":3},
+        {"from":"R","to":"S","weight":1},
+        {"from":"S","to":"T","weight":2},
+        {"from":"T","to":"U","weight":3},
+        {"from":"U","to":"V","weight":2},
+        {"from":"V","to":"W","weight":3},
+        {"from":"W","to":"X","weight":1}
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Large Graph 3 – Pure DAG for Timing",
+      "nodes": ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
+      "edges": [
+        {"from":"A","to":"B","weight":2},
+        {"from":"A","to":"C","weight":3},
+        {"from":"B","to":"D","weight":2},
+        {"from":"C","to":"D","weight":4},
+        {"from":"D","to":"E","weight":1},
+        {"from":"E","to":"F","weight":3},
+        {"from":"E","to":"G","weight":2},
+        {"from":"F","to":"H","weight":4},
+        {"from":"G","to":"I","weight":3},
+        {"from":"H","to":"J","weight":2},
+        {"from":"I","to":"K","weight":1},
+        {"from":"J","to":"L","weight":3},
+        {"from":"K","to":"M","weight":4},
+        {"from":"L","to":"N","weight":2},
+        {"from":"M","to":"O","weight":3},
+        {"from":"N","to":"P","weight":1},
+        {"from":"O","to":"Q","weight":2},
+        {"from":"P","to":"R","weight":3},
+        {"from":"Q","to":"S","weight":4},
+        {"from":"R","to":"T","weight":1},
+        {"from":"S","to":"U","weight":2},
+        {"from":"T","to":"V","weight":3},
+        {"from":"U","to":"W","weight":4},
+        {"from":"V","to":"X","weight":1},
+        {"from":"W","to":"Y","weight":3},
+        {"from":"X","to":"Z","weight":2}
+      ]
+    }
+  ]
+}
