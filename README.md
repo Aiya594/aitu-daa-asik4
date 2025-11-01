@@ -58,8 +58,7 @@ Example format:
         {"from": "D", "to": "F", "weight": 5},
         {"from": "E", "to": "F", "weight": 3}
       ]
-    },
-    ...
+    }
   ]
 }
 ```
