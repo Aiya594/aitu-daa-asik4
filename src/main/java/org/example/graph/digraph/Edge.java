@@ -1,11 +1,18 @@
 package org.example.graph.digraph;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public final class Edge {
     private  String from;
     private  String to;
     private  long weight;
 
-    public void DirectedEdge(String from, String to, long weight) {
+    @JsonCreator
+    public Edge(
+            @JsonProperty("from") String from,
+            @JsonProperty("to") String to,
+            @JsonProperty("weight") long weight) {
         this.from = from;
         this.to = to;
         this.weight = weight;

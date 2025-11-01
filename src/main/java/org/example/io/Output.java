@@ -15,15 +15,20 @@ public class Output {
     public static class Result {
         public final int graph_id;
         public final Map<String,Integer> input_stats;
-        public final Object scc; // list of components
-        public final List<String> topoOrder; // condensation topo
-        public final DagResult dag; // optional DAG results
-        public Result(int graph_id, Map<String,Integer> input_stats, Object scc, List<String> topoOrder, DagResult dag) {
+        public final Object scc;
+        public final List<String> topoOrder;
+        public final DagResult dag;
+        public final Map<String, List<String>> scc_labels; // ← add this!
+
+        public Result(int graph_id, Map<String,Integer> input_stats,
+                      Object scc, List<String> topoOrder, DagResult dag,
+                      Map<String, List<String>> scc_labels) {
             this.graph_id = graph_id;
             this.input_stats = input_stats;
             this.scc = scc;
             this.topoOrder = topoOrder;
             this.dag = dag;
+            this.scc_labels = scc_labels;
         }
     }
 
